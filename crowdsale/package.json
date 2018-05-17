@@ -1,0 +1,42 @@
+{
+  "name": "crowdsale",
+  "version": "1.0.0",
+  "description": "Smart contract for crowdsale",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ijsfd/combishackatonico2018.git"
+  },
+  "keywords": [
+    "crowdsale",
+    "solidity",
+    "ethereum"
+  ],
+  "author": "Immutables",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ijsfd/combishackatonico2018/issues"
+  },
+  "homepage": "https://github.com/ijsfd/combishackatonico2018#readme",
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
+    "truffle-core": "^4.1.8",
+    "truffle-hdwallet-provider": "0.0.5"
+  },
+  "dependencies": {
+    "zeppelin-solidity": "^1.9.0"
+  }
+}
