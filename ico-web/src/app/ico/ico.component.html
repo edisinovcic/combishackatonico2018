@@ -1,3 +1,79 @@
-<p>
-  ico works!
-</p>
+<section class="mat-typography">
+  <br />
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="backToHomePage()">
+    <mat-icon>undo</mat-icon>Back to home page
+  </button>
+  <mat-card id="userInfo" class="mat-card-section">
+    <mat-card-header>
+      <mat-card-title><span class="mat-headline">User info</span></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <mat-list class="col-xs-12 col-md-12">
+          <mat-list-item>
+            Current account: &nbsp;<strong>{{ currentAccount }}</strong>&nbsp;
+            <mat-chip-list>
+              <mat-chip *ngIf="isOwner" color="accent" selected="true">Crowdsale owner</mat-chip>
+            </mat-chip-list>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Acquired tokens: &nbsp;<strong>{{ tokenBalance }}</strong> &nbsp;CMT</mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card id="tokenSale" class="mat-card-section">
+    <div class="row token-sale-section">
+      <p class="mat-title centered-item">Token Sale</p>
+      <form class="token-sale-form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Amount (in ETH)</mat-label>
+          <input #amountInput type="number" matInput placeholder="Amount (in ETH)" required>
+        </mat-form-field>
+        <div>
+          <button
+            mat-raised-button
+            color="accent"
+            class="full-width"
+            [disabled]="amountInput.value === ''"
+            (click)="buyTokens(amountInput.value)">
+            Buy tokens
+          </button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+
+  <mat-card id="icoInfo" class="mat-card-section">
+    <mat-card-header>
+      <mat-card-title><span class="mat-headline">ICO info: Crowdsale and details</span></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <mat-list class="col-xs-12 col-md-6">
+          <mat-list-item>Token name: &nbsp;<strong>Combis Token (CMT)</strong></mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Token supply: &nbsp;<strong>50,000,000</strong></mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Token type: &nbsp;<strong>ERC20</strong></mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Accepted currency: &nbsp;<strong>ETH</strong></mat-list-item>
+        </mat-list>
+
+        <mat-list class="col-xs-12 col-md-6">
+          <mat-list-item>Soft cap: &nbsp;<strong>100 ETH</strong></mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Hard cap:&nbsp;<strong>1000 ETH</strong></mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Rate:&nbsp;<strong>{{ currentRate  }}</strong></mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Collected:&nbsp;<strong>{{ crowdsaleBalance }} ETH</strong></mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>

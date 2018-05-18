@@ -1,5 +1,5 @@
 {
-  "crowdsaleContractAddress": "0x8f0483125fcb9aaaefa9209d8e9d7b9c8b9fb90f",
+  "crowdsaleContractAddress": "0x063d028ffd361ecab03122ae55c7b7c12804f497",
   "crowdsaleContractAbi": [
     {
       "constant": true,
@@ -242,7 +242,7 @@
       "type": "function"
     }
   ],
-  "tokenContractAddress": "0x8f0483125fcb9aaaefa9209d8e9d7b9c8b9fb90f",
+  "tokenContractAddress": "0x0c673e56ff4248a0c914b198fbcc4d1f419b82ae",
   "tokenContractAbi": [
     {
       "constant": true,

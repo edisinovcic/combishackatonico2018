@@ -11,6 +11,7 @@ import { IcoComponent } from './ico/ico.component';
 import { AppConfig } from './shared/app-config.service';
 import { AlertService } from './shared/alert.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EthereumService } from './shared/ethereum.service';
 
 export function initializeApp(appConfig: AppConfig) {
   return () => appConfig.load();
@@ -31,6 +32,7 @@ export function initializeApp(appConfig: AppConfig) {
     HttpClientModule
   ],
   providers: [
+    EthereumService,
     AlertService,
     AppConfig,
     {
