@@ -8,7 +8,7 @@ contract CombisCrowdsale is MintedCrowdsale, Ownable {
     uint256 public constant RATE = 1000;
     uint256 public constant SELLABLE_TOKEN_AMOUNT = 50 * (10 ** 6) * (10 ** 18);
 
-    uint256 public constant MIN_BONUS_WEI_AMOUNT = 1 * (10 ** 18);
+    uint256 public constant MIN_BONUS_WEI_AMOUNT = 2 * (10 ** 18);
     uint256 public constant BONUS_RATE = 50; // percentage (50%)
 
     function CombisCrowdsale(
